@@ -1,0 +1,98 @@
+/* Structure */
+#main-header {
+    /* background-color: bisque; */
+}
+
+#main-content{
+    background-color:darkseagreen;
+    padding: 1px;
+}
+
+.col1, .col2{
+    background-color:white;
+    padding: 10px;
+    margin: 1px;
+    border-radius: 1px;
+}
+
+.col2 ul{
+    padding: 1px;
+    margin: 1px;
+}
+
+/* Navigation */
+#main-nav ul{
+    padding-left: 0;
+}
+
+#main-nav li{
+    list-style-type: none;
+    padding: 5px;
+    background-color: darkolivegreen;
+    border-bottom: 1px solid gray;
+    margin:1px;
+}
+
+#main-nav a{
+    text-decoration: none;
+    color:aliceblue
+}
+
+/* Typography */
+body{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+#main-header h1{
+    text-align: center;
+}
+
+#main-content h2{
+    color: white;
+}
+
+/* Larger resolutions */
+@media (min-width: 900px) {
+    #main-nav ul, .flex-container{ 
+        display: flex;
+    }
+
+    #main-nav li{
+        flex: 1;
+    }
+    .col1, .row2col1{
+        flex: 1
+    }
+    
+    .col2{
+        flex: 2
+    }
+
+}
+
+
+.row2col1{
+    margin:10px;
+    text-align: center;
+}
+.row2col1 h5{
+ margin-top:20px;
+}
+
+
+.idea{
+    display: flex;
+}
+
+.idea img{
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.row2col1 img{
+    max-width: 100%;
+}
+
+#main-footer{
+    text-align: center;
+}
