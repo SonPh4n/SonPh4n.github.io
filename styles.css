@@ -1,6 +1,6 @@
 body {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color: #04e09a;
+    background-color: #5A3BEB;
     /* color: #e0b21b; */
     line-height: 1.6;
 }
@@ -13,12 +13,40 @@ body {
     box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
 }
 /* Heading */
+
+#main-header{
+    text-align: center;
+}
 h1, h2 {
-    color: #4a69bd;
+    color: #000000;
 }
 /* Paragraphs */
 p {
-    color: #6c80e0;
+    color: #000000;
+}
+
+.col1, .col2, .col3{
+    background-color: #6c80e0;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 2px;
+    text-align: center;
+}
+
+.col1 img, .col2 img, .col3 img{
+    width: 300px;
+    height: 150px;
 }
 
 
+
+@media (min-width: 900px) {
+    /* Flexbox layout for screens wider than 900px */
+    .flex-container {
+        display: flex;
+    }
+
+    .col1, .col2, .col3{
+        flex: 1;
+    }
+}
