@@ -1,0 +1,182 @@
+/* Structure */
+
+
+#main-header {
+    background-color: rgb(0, 0, 0);
+    /* position:relative */
+}
+
+#main-content {
+    /* background-color: darkseagreen; */
+    padding-left: 100px;
+    padding-right: 200px;
+    /* position: absolute;
+    top:150px; */
+    /* flex-grow: 1; */
+}
+
+.col1, .col2 {
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    margin: 1px;
+    border-radius: 1px;
+}
+
+
+
+/* Navigation */
+#main-nav ul, #side-nav li {
+    padding-left: 0;
+}
+/* #main-nav ul{
+    position:absolute;
+    top:0;
+    right:0;
+    margin:0;
+    padding:0;
+} */
+
+#main-nav li{
+    list-style-type: none;
+    padding: 5px;
+    background-color: rgb(0, 0, 0);
+    margin: 1px;
+    font-size: small;
+    /* display: inline;
+    width: 100%; */
+}
+
+#side-nav li{
+    list-style-type: none;
+    padding: 5px;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid gray;
+    margin: 1px;
+}
+
+#side-nav a{
+    color: black;
+    text-decoration: none;
+    font-size: larger;
+}
+
+#main-nav h1{
+    background-color: #73000a;
+    color: white;
+    padding: 10px;
+    /* position:absolute;
+    top:55px;
+    left:0px; */
+    /* width:110%;
+    margin: 0; */
+}
+
+#main-nav a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+/* Typography */
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+
+#main-content h2 {
+    color: white;
+}
+
+#main-content h3{
+    color:#73000a;
+}
+
+.flex-container {
+    display: block; 
+}
+
+.col2 {
+    display:flex;
+    flex-direction: column;
+}
+.col1{
+    width: 25%;
+}
+
+
+
+.bottom-columns{
+    display: flex;
+    flex:1;
+    padding-top: 35px;
+}
+
+.bottom-right{
+    padding-left: 45px;
+}
+.bottom-right{
+    flex: 30%
+}
+
+.Summary{
+    border-bottom: 1px solid gray;
+    padding-bottom: 15px;
+    font-size: larger;
+}
+
+.bottom-left{
+    font-size: large;
+    flex:70%
+}
+
+.at-a-glance{
+    border-right: 1px solid gray;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    border-left: 3px solid #73000a;
+    padding: 5px;
+}
+
+.future{
+    border-right: 1px solid gray;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    border-left: 3px solid #73000a;
+}
+
+.Highlights{
+    border-bottom: 1px solid gray;
+    padding-top: 20px;
+}
+
+/* Larger resolutions */
+@media (min-width: 900px) {
+    /* Flexbox layout for screens wider than 900px */
+    .flex-container {
+        display: flex;
+        flex-wrap: wrap; /* Allow wrapping */
+    }
+
+    #main-nav ul { 
+        display: flex;
+    }
+
+    #main-nav li {
+        flex: 1;
+    }
+    
+    .col2 {
+        flex: 2; /* Twice the width of col1 */
+    }
+
+    .end{
+        display: flex;
+    }
+
+}
+
+/* Footer */
+#main-footer {
+    text-align: center;
+    background-color: #ececec;
+}
