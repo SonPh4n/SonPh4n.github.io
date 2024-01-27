@@ -3,16 +3,12 @@
 
 #main-header {
     background-color: rgb(0, 0, 0);
-    /* position:relative */
 }
 
 #main-content {
-    /* background-color: darkseagreen; */
     padding-left: 100px;
     padding-right: 200px;
-    /* position: absolute;
-    top:150px; */
-    /* flex-grow: 1; */
+    
 }
 
 .col1, .col2 {
@@ -21,7 +17,6 @@
     margin: 1px;
     border-radius: 1px;
 }
-
 
 
 /* Navigation */
@@ -50,7 +45,7 @@
 .search{
     max-width: 300px;
     position: relative;
-    left: 870px;
+    left: 890px;
     padding: 10px; 
     margin: 10px; 
     background-color: black;
@@ -59,6 +54,7 @@
     text-align: left;
     font-size: 1em;
 }
+
 
 #side-nav li{
     list-style-type: none;
@@ -163,7 +159,6 @@ body {
     /* Flexbox layout for screens wider than 900px */
     .flex-container {
         display: flex;
-        flex-wrap: wrap; /* Allow wrapping */
     }
 
     #main-nav ul { 
@@ -181,7 +176,13 @@ body {
     .end{
         display: flex;
     }
+}
 
+@media (max-width: 768px) {
+    #side-nav 
+    {
+        display: none;
+    }
 }
 
 /* Footer */
