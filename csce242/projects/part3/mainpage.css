@@ -1,0 +1,46 @@
+.main {
+    margin-left: 200px; /* Same as the width of the sidenav */
+    font-size: 20px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+  }
+
+  .main h2, .main h3{
+    text-align: center;
+  }
+
+  .col1, .col2{
+    text-align: center;
+    padding-top: 50px;
+    padding: 50px;
+  }
+
+  .col1 {
+    text-align: center; 
+    border-right: 2px solid gray;
+    padding: 50px;
+  }
+  
+  .subc {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-around; 
+    text-align: left; 
+  }
+  
+  .subc img, .subc p {
+    flex: 1;
+    padding: 0 20px;
+  }
+
+  @media(min-width: 768px){
+    .flex-container{
+        display: flex;
+        
+    }
+
+    .col1, .col2, .subc1, .subc2{
+        flex: 1;
+    }
+   
+
+}
