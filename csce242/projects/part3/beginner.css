@@ -1,0 +1,48 @@
+.main {
+    margin-left: 200px; 
+    font-size: 20px; 
+    padding: 0px 10px;
+    border: 1px solid gray;
+  }
+
+  h2{
+    margin-left: 200px; 
+    font-size: 30px;
+    padding: 0px 10px;
+  }
+
+  .main h2, .main h3, h2{
+    text-align: center;
+  }
+
+  .col1, .col2, .col3, .col4{
+    padding-top: 50px;
+    padding: 25px;
+  }
+
+  .col1 p{
+    border: 2px solid gray;
+    padding: 10px;
+  }
+
+  .col3 p{
+    border: 2px solid gray;
+    padding: 10px;
+  }
+  
+
+  @media(min-width: 768px){
+    .flex-container{
+        display: flex;
+        
+    }
+
+    .col1, .col2, .col3, .col4{
+        flex: 1;
+    }
+
+}
+
+
+
+

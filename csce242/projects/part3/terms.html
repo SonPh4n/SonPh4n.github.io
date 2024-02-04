@@ -3,11 +3,42 @@
     <head>
         <title>Main Page</title>
         <link rel="stylesheet" href="terms.css">
+        <link rel="stylesheet" href="topnav.css">
         <link rel="stylesheet" href="sidenav.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="sidenav.js"></script>
+        <script src="hamburger.js"></script>
     </head>
     <body>
+
+        <div class="topnav">
+            <a href="#home" class="activet">Navigation</a>
+            <div id="myLinks">
+              <a href="mainpage.html">Dashboard</a>
+                <a href="equipment.html">Equipment Use</a>
+                <a href="terms.html">Terms</a>
+                <a href="techniques.html">Techniques</a>
+                <a href="#">Beginner Book</a>
+                <a href="beginner.html">Recipe 1</a>
+                <a href="#">Recipe 2</a>
+                <a href="#">Recipe 3</a>
+                <a href="#">Intermediate Book</a>
+                <a href="intermediate.html">Recipe 1</a>
+                <a href="#">Recipe 2</a>
+                <a href="#">Recipe 3</a>
+                <a href="#">Expert Book</a>
+                <a href="expert.html">Recipe 1</a>
+                <a href="#">Recipe 2</a>
+                <a href="#">Recipe 3</a>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+        </div>
+
         <div class="sidenav">
+          <a href="mainpage.html">Dashboard</a>
+
             
             <button class="dropdown-btn">Terms & Techniques</button>
             <div class="dropdown-container">
