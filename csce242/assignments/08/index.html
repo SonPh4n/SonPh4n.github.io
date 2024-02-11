@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment 8</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="script.js"></script>
+        
+    </head>
+
+    <body>
+        <h1>Assignment 8</h1>
+        <h2>If Statements</h2>
+        <div class="flex-container">
+
+
+
+            <div class="topnav">
+                <a href="#" class="activet" id="linkExercise1">Exercise 1 </a>  |  <a href="#" class="activet" id="linkExercise2"> Exercise 2</a>
+            </div>
+
+            <div class="hamburger"> 
+
+                <button class="caret-down" id="downcaretid" onclick="toggleMenu()">▼</button> 
+                <button class="caret-up" id="upcaretid" onclick="toggleMenu()">▲</button> 
+                
+                <div id="myLinks">
+                    <a href="#" id="linkExercise1ham">Exercise 1</a>
+                    <a href="#" id="linkExercise2ham">Exercise 2</a>
+                </div>
+                
+            </div>
+
+
+            <div class="exercises">
+                <div class="exercise1">
+                    <h2>Enter Command</h2>
+                    <div>
+                        <ul>
+                            <li>b: Read a Book</li>
+                            <li>c: Act like a clown</li>
+                            <li>p: Have a birthday party</li>
+                            <li>r: Walk in the rain</li>
+                            <li>s: Shovel up some dirt</li>
+                            <li>w: Go to work</li>
+                        </ul>
+                        <form id="commandf">
+                            <label for="command"></label><br>
+                            <input type="text" id="command" name="command"><br>
+                            <input type="submit" value="Submit" style="display: none;">
+                        </form> 
+
+                        <img id="swapimage" src="images/original.jpg" alt="changing image"/>
+                        <p>
+                            Image by
+                            <a href="https://www.freepik.com/free-vector/hand-drawn-stickman-collection_20856908.htm#query=stick%20figure&position=1&from_view=keyword&track=ais&uuid=12d17ea3-cffc-4386-9be4-ff9dc4b5edc2">Freepik</a>
+                        </p>
+                    </div>
+                </div>
+                <div class ="exercise2">
+                    <h2>Slider Rotate</h2>
+                    <img id="rotating"src="images/yoga1.jpg" alt="sliding image of yoga"/>
+                    <p>
+                        Image by
+                        <a href="https://www.freepik.com/free-vector/hand-drawn-stickman-collection_20856908.htm#query=stick%20figure&position=1&from_view=keyword&track=ais&uuid=12d17ea3-cffc-4386-9be4-ff9dc4b5edc2">Freepik</a>
+                    </p>
+                    <input type="range" id="myRange" min="1" max="8" value="1" class="slider">
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <footer>
+        <h2>@sonph4n.github.io</h2>
+    </footer>
+</html>

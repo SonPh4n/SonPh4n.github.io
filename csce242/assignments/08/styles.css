@@ -1,0 +1,133 @@
+body {
+    background-color: #F2F0D5;
+}
+
+body h1, body h2 {
+    text-align: center;
+}
+
+.flex-container {
+    width: 350px;
+    margin: auto;
+}
+
+.topnav {
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.topnav a, .hamburger a {
+    color: #000;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 0 10px;
+    cursor: pointer;
+    display: block; 
+}
+
+.hamburger {
+    padding: 10px 0; 
+}
+.caret-up, .caret-down {
+    background-color: #745e5e;
+    color: white; 
+    border: none; 
+    padding: 5px 10px; 
+    cursor: pointer;
+    font-size: 20px; 
+    display: inline-block; 
+}
+
+.caret-up {
+    display: none;
+}
+
+.topnav #myLinks, .hamburger #myLinks {
+    display: none;
+}
+
+.exercise1, .exercise2 {
+    background: #F2F0D5;
+    padding: 5px;
+    border: 2px solid #5d878c;
+    text-align: center;
+}
+
+.exercise2 img, .exercise1 img {
+    height: 300px;
+    width: auto;
+}
+
+.exercise1 ul {
+    text-align: left;
+}
+
+.exercise1 form {
+    padding-bottom: 10px;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 25px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .slider:hover {
+    opacity: 1;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #04AA6D;
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #04AA6D;
+    cursor: pointer;
+  }
+
+@media (min-width: 768px) {
+    .topnav {
+        display: flex;
+    }
+
+    .hamburger {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .topnav a.icon, .hamburger a.icon {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .hamburger #myLinks {
+        display: none;
+    }
+    .exercise2 img, .exercise1 img {
+        height: 300px;
+        width: auto;
+    }
+    .hamburger {
+        display: block;
+    }
+    .topnav{
+        display:none;
+    }
+}
