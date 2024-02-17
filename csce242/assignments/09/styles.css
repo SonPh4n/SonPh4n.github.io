@@ -1,0 +1,110 @@
+body {
+    background-color: #F2F0D5;
+}
+
+body h1, body h2 {
+    text-align: center;
+}
+
+.flex-container {
+    width: 500px;
+    margin: auto;
+}
+
+.topnav {
+    text-align: center;
+    padding: 20px 0;
+    margin: auto;
+}
+
+.topnav a {
+    color: #000;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 0 10px;
+    cursor: pointer;
+    display: block; 
+}
+
+
+
+.topnav #myLinks {
+    display: none;
+}
+
+.exercise1, .exercise2{
+    background: #F2F0D5;
+    padding: 5px;
+    border: 2px solid #5d878c;
+    text-align: center;
+}
+
+.rectangle{
+    width: 250px;
+    height: 600px;
+    background:white;
+    border: 2px solid #5d878c;   
+    margin:auto;
+    position: relative;
+ 
+}
+#soccerball {
+    position: absolute;
+    top: 0px;
+    left: 25px;
+
+
+}
+
+.exercise1 { 
+    height: 800px; 
+    width: 500px;
+}
+
+.column{
+    display: flex; 
+}
+
+.images-column, .text-column {
+    flex: 1;
+}
+
+.text-column p{
+    padding-bottom: 220px;
+}
+
+
+.exercise1 img {
+    height: 200px;
+    width: auto;
+}
+
+.exercise2 img {
+    height: 250px;
+    width: auto;
+}
+
+
+
+@media (min-width: 768px) {
+    .topnav {
+        display: flex;
+    }
+
+    
+}
+
+@media (max-width: 768px) {
+    .topnav a.icon{
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    
+    .exercise2 img, .exercise1 img {
+        height: 200px;
+        width: auto;
+    }
+    
+}
