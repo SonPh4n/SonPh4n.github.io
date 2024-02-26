@@ -1,0 +1,31 @@
+body {
+    background-color: #F2F0D5;
+    
+}
+
+body h1, body h2 {
+    text-align: center;
+}
+
+.flex-container {
+    width: 700px;
+    margin: auto;
+}
+
+
+
+#slideshow, #imageArray{
+    border: 1px solid #5d878c;
+    padding: 10px;
+    text-align: center;
+    
+}
+
+.hidden{
+    display:none;
+}
+
+@media (min-width: 768px) {
+ 
+}
+

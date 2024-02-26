@@ -23,7 +23,7 @@ p {
     color: #000000;
 }
 
-.col1, .col2, .col3, .col4, .col5, .col6, .col7, .row2col1, .row2col2, .row2col3, .row2col4{
+.col1, .col2, .col3, .col4, .col5, .col6, .col7, .col8, .row2col1, .row2col2, .row2col3, .row2col4, .row2col5{
     background-color: #6c80e0;
     padding: 10px;
     margin: 5px;
@@ -31,7 +31,7 @@ p {
     text-align: center;
 }
 
-.col1 img, .col2 img, .col3 img, .col4 img, .col5 img, .col6 img, .col7 img, .row2col1 img, .row2col2 img, .row2col3 img, .row2col4 img{
+.col1 img, .col2 img, .col3 img, .col4 img, .col5 img, .col6 img, .col7 img, .col8 img, .row2col1 img, .row2col2 img, .row2col3 img, .row2col4 img, .row2col5 img{
     width: 300px;
     height: 150px;
 }
@@ -43,7 +43,7 @@ p {
         display: flex;
     }
 
-    .col1, .col2, .col3, .col4, .col5, .col6, .col7, .row2col1, .row2col2, .row2col3, .row2col4{
+    .col1, .col2, .col3, .col4, .col5, .col6, .col7, .col8, .row2col1, .row2col2, .row2col3, .row2col4, .row2col5{
         flex: 1;
     }
 }
