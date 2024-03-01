@@ -1,0 +1,60 @@
+#dialog-details {
+    padding: 10px;
+}
+
+#dialog-image img{
+    width: auto;
+    height: 400px;
+}
+#modal-columns{
+    padding: 40px;
+}
+
+
+
+#main-header h1, #main-header h2, #main-footer h2 {
+    text-align: center;
+}
+
+.treethingy {
+    background: blue;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.treethingy .columns img {
+    width: 100%;
+    height: auto; 
+    max-width: 1080px;
+}
+
+.treethingy h3 {
+    text-align: center;
+}
+
+@media (min-width: 900px) {
+    #tree-list {
+        display: flex;
+        flex-wrap: wrap; 
+    }
+
+    .treethingy {
+        flex: 1;
+        margin: 10px;
+    }
+
+    #modal-columns{
+        display:flex;
+        flex:1;
+    }
+
+    
+}
+
+@media screen and (min-width: 600px) {
+    .w3-modal-content {
+        width: 50%; 
+    }
+    
+}
