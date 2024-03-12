@@ -1,0 +1,67 @@
+body{
+    background: rgb(111, 154, 229);
+}
+
+#main-header h1{
+    text-align: center;
+}
+
+#houses-Section h3{
+    text-align: center;
+}
+
+#houses-Section section {
+    padding: 20px;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.details-container {
+    background-color: rgb(255, 255, 255);
+    padding-left: 10px;
+    width: 100%;
+}
+
+
+#houses-Section img {
+    max-width: 500px;
+    height: auto;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 15px 0 ; 
+}
+
+.floor-plans h4{
+    text-align: center;
+}
+
+.floor-plans {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.floor-plan {
+    flex: 1;
+    min-width: 300px;
+    padding: 10px;
+    text-align: center;
+}
+
+.floor-plan img {
+    width: 100%;
+    height: auto;
+}
+
+#main-footer{
+    text-align: center;
+}
