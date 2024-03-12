@@ -1,0 +1,87 @@
+body{
+  background: #D8DBE2;
+}
+
+.main {
+    margin-left: 200px; /* Same as the width of the sidenav */
+    font-size: 20px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+  }
+.summ{
+  border: 1px solid #58A4B0;
+  padding: 10px;
+  width: 80%;
+  margin-left: 100px;
+  text-align: center;
+}
+  .main h2, .main h3{
+    text-align: center;
+  }
+
+  .col1, .col2{
+    text-align: center;
+    padding-top: 50px;
+    padding: 50px;
+  }
+
+  .col1 {
+    text-align: center; 
+    border-right: 2px solid #58A4B0;
+    padding: 50px;
+  }
+  .col1 img{
+    width: 450px;
+    height: auto;
+  }
+  .col2 img{
+    width: 350px;
+    height: auto;
+  }
+  
+  .subc {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-around; 
+    text-align: left; 
+  }
+  
+  .subc img, .subc p {
+    flex: 1;
+    padding: 0 20px;
+  }
+
+  @media(min-width: 768px){
+    .flex-container{
+        display: flex;
+        
+    }
+
+    .col1, .col2, .subc1, .subc2{
+        flex: 1;
+    }
+   
+
+}
+
+@media (max-width: 768px) {
+  .main {
+      margin-left: 0; 
+  }
+  
+  .flex-container, .subc {
+      display: block; 
+  }
+  
+  .summ {
+      width: auto;
+      margin-left: 0; 
+  }
+
+  .col1, .col2 {
+      padding: 20px; 
+  }
+
+  .col1 {
+      border-right: none;
+  }
+}

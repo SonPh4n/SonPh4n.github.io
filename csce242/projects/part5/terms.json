@@ -1,0 +1,70 @@
+{
+    "cookingTerms": [
+      {
+        "_id": 1,
+        "name": "Julienne",
+        "definition": "A method of cutting vegetables into thin strips.",
+        "img_name": "images/julienne.jpg",
+        "related_terms": ["Chop", "Dice", "Mince"],
+        "difficulty_level": "Intermediate"
+      },
+      {
+        "_id": 2,
+        "name": "Sauté",
+        "definition": "Cooked or browned in a pan with a small amount of fat.",
+        "img_name": "images/saute.jpg",
+        "related_terms": ["Fry", "Stir-Fry", "Pan-Fry"],
+        "difficulty_level": "Beginner"
+      },
+      {
+        "_id": 3,
+        "name": "Blanching",
+        "definition": "Blanching is a cooking process in which a food, usually a vegetable or fruit, is scalded in boiling water, removed after a brief timed interval, and finally plunged into iced water or placed under cold running water to halt the cooking process. Blanching foods helps reduce quality loss over time.",
+        "img_name": "images/blanching.jpg",
+        "related_terms": ["Boiling", "Cooling", "Preserving"],
+        "difficulty_level": "Beginner"
+      },
+      {
+        "_id": 4,
+        "name": "Broil",
+        "definition": "Broiling is a dry-heat cooking method that involves exposing food to direct, intense heat from an overhead broiler element or flame. It's a bit like upside-down grilling.",
+        "img_name": "images/broil.jpg",
+        "related_terms": ["Grilling", "Roasting", "Baking"],
+        "difficulty_level": "Intermediate"
+      },
+      {
+        "_id": 5,
+        "name": "Simmering",
+        "definition": "Simmering is a food preparation technique by which foods are cooked in hot liquids kept just below the boiling point of water and above poaching temperature. To create a steady simmer, a liquid is brought to a boil, then its heat source is reduced to a lower, constant intensity.",
+        "img_name": "images/simmering.jpg",
+        "related_terms": ["Boiling", "Poaching", "Steaming"],
+        "difficulty_level": "Easy"
+      },
+      {
+        "_id": 6,
+        "name": "Roasting",
+        "definition": "Roasting is a cooking method that involves cooking food, typically meat, poultry, and vegetables, in an oven or over a fire. By exposing the food to high heat, roasting can create a flavorful crust on the outside while keeping the interior moist.",
+        "img_name": "images/roasting.jpg",
+        "related_terms": ["Baking", "Grilling", "Broiling"],
+        "difficulty_level": "Easy"
+      },
+      {
+        "_id": 7,
+        "name": "Dicing",
+        "definition": "Dicing is a culinary knife cut in which the food item is cut into small blocks or dice. This may be done for aesthetic reasons or to create uniformly sized pieces to ensure even cooking. Dicing allows for distribution of flavour and texture throughout the dish, as well as a somewhat quicker cooking time.",
+        "img_name": "images/dicing.jpg",
+        "related_terms": ["Chopping", "Minicing", "Slicing"],
+        "difficulty_level": "Intermediate"
+      },
+      {
+        "_id": 8,
+        "name": "Beating",
+        "definition": "Beating is the process of rapidly mixing or stirring ingredients until they are blended. Beating incorporates air into the mixture and can be done by hand or with a mixer.",
+        "img_name": "images/beating.jpg",
+        "related_terms": ["Whisking", "Mixing", "Stirring"],
+        "difficulty_level": "Easy"
+      }
+     
+    ]
+  }
+  

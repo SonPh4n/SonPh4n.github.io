@@ -1,0 +1,43 @@
+body{
+  background: #D8DBE2;
+}
+
+.main {
+    margin-left: 200px; 
+    font-size: 20px; 
+    padding: 0px 10px;
+  }
+
+
+
+  .main h2, .main h3{
+    text-align: center;
+  }
+
+  .col1, .col2, .col3, .col4{
+    text-align: center;
+    padding-top: 50px;
+    padding: 10px;
+    background-color: #75a8b0;
+  }
+
+
+  .col1 img, .col2 img, .col3 img, .col4 img{
+    width: 175px;
+    height: 125px;
+  }
+
+  
+  @media(min-width: 768px){
+    .flex-container{
+        display: flex;
+        gap: 10px; /* Add the gap property here */
+
+    }
+
+    .col1, .col2, .col3, .col4{
+        flex: 1;
+    }
+   
+
+}
