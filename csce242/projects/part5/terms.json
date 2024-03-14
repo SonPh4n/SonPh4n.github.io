@@ -38,7 +38,7 @@
         "definition": "Simmering is a food preparation technique by which foods are cooked in hot liquids kept just below the boiling point of water and above poaching temperature. To create a steady simmer, a liquid is brought to a boil, then its heat source is reduced to a lower, constant intensity.",
         "img_name": "images/simmering.jpg",
         "related_terms": ["Boiling", "Poaching", "Steaming"],
-        "difficulty_level": "Easy"
+        "difficulty_level": "Beginner"
       },
       {
         "_id": 6,
@@ -46,7 +46,7 @@
         "definition": "Roasting is a cooking method that involves cooking food, typically meat, poultry, and vegetables, in an oven or over a fire. By exposing the food to high heat, roasting can create a flavorful crust on the outside while keeping the interior moist.",
         "img_name": "images/roasting.jpg",
         "related_terms": ["Baking", "Grilling", "Broiling"],
-        "difficulty_level": "Easy"
+        "difficulty_level": "Beginner"
       },
       {
         "_id": 7,
@@ -62,7 +62,7 @@
         "definition": "Beating is the process of rapidly mixing or stirring ingredients until they are blended. Beating incorporates air into the mixture and can be done by hand or with a mixer.",
         "img_name": "images/beating.jpg",
         "related_terms": ["Whisking", "Mixing", "Stirring"],
-        "difficulty_level": "Easy"
+        "difficulty_level": "Beginner"
       }
      
     ]
