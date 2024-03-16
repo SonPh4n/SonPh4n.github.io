@@ -1,7 +1,10 @@
 body{
   background: #D8DBE2;
 }
-
+img{
+  height: auto;
+  width: 300px;
+}
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;

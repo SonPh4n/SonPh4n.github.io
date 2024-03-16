@@ -8,7 +8,9 @@ body{
     padding: 0px 10px;
   }
 
-
+.flex-container p{
+  border-radius: 1px solid rgb(144, 33, 33);
+}
 
   .main h2, .main h3{
     text-align: center;
