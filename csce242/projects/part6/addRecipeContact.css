@@ -1,0 +1,76 @@
+body{
+    background: #D8DBE2;
+  }
+  
+  .main {
+      margin-left: 200px; /* Same as the width of the sidenav */
+      font-size: 20px; /* Increased text to enable scrolling */
+      padding: 0px 10px;
+    }
+  
+    .main h2, .main h3{
+      text-align: center;
+    }
+    
+    .hidden{
+        display:none;
+    }
+
+    #map{
+      max-width: 100%;
+    }
+
+    .col2 p, .col2 button{
+      display: block;
+      margin-bottom: 20px;
+      margin-top: 10px;
+    }
+    
+    .col1, .col2{
+      padding-top: 50px;
+      padding: 50px;
+    }
+  
+    .col1 {
+      border-right: 2px solid #58A4B0;
+      padding: 50px;
+    }
+    
+    
+    textarea {
+        vertical-align: top;
+    }
+    
+    
+  
+    @media(min-width: 768px){
+      .flex-container{
+          display: flex;
+          
+      }
+  
+      .col1, .col2{
+          flex: 1;
+      }
+     
+  
+  }
+  
+  @media (max-width: 768px) {
+    .main {
+        margin-left: 0; 
+    }
+    
+    .flex-container{
+        display: block; 
+    }
+    
+  
+    .col1, .col2 {
+        padding: 20px; 
+    }
+  
+    .col1 {
+        border-right: none;
+    }
+  }
