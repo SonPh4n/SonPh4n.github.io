@@ -1,0 +1,80 @@
+body{
+  background: #D8DBE2;
+}
+
+.main {
+    margin-left: 200px; 
+    font-size: 20px; 
+    padding: 0px 10px;
+  }
+
+  .video{
+    margin-left: 200px; 
+    font-size: 20px;
+    padding: 0px 10px;
+    text-align: center;
+  
+  }
+  .video img{
+    width: 100%;
+    height: auto;
+  }
+  @media screen and (max-width: 768px) {
+    .video, .main {
+      margin-left: 0; 
+      width: 100%; 
+    }
+  }
+
+  .main h2, .main h3{
+    text-align: center;
+  }
+
+ 
+.dropbtn {
+    background-color: #DAA49A;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: #58A4B0;
+  }
+  
+  .dropdown {
+    position: relative;
+    margin-left: 750px; 
+    font-size: 20px; 
+    padding: 0px 10px;
+    padding-bottom: 20px;
+  }
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #A9BCD0;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  .show {display:block;}
+
+  .video{
+    
+  }
