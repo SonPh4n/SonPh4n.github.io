@@ -7,7 +7,6 @@
         <link rel="stylesheet" href="sidenav.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="hamburger.js"></script>
-        <script src="terms.js"></script>
     </head>
     <body>
       <div class="topnav">
@@ -98,9 +97,19 @@
                     <label for="termDefinition">Defintion:</label>
                     <textarea id="termDefinition" name="definition" required></textarea><br><br>
                     <label for="relatedTerms">Related Terms: </label>
-                    <input type="button" id="addrelatedButton" value="Add Related Term"/><br><br>
+                    <input type="button" id="addRelatedButton" value="Add Related Term"/><br><br>
                     <div id="morerelated"></div>
 
+                    <div id="difficulty-level-section">
+                      <label>Difficulty Level:</label><br>
+                      <input type="radio" id="beginner" name="difficulty" value="Beginner">
+                      <label for="beginner">Beginner</label><br>
+                      <input type="radio" id="intermediate" name="difficulty" value="Intermediate">
+                      <label for="intermediate">Intermediate</label><br>
+                      <input type="radio" id="expert" name="difficulty" value="Expert">
+                      <label for="expert">Expert</label>
+                    </div>
+                    <br>
 
                     <input type="button" id="cancelbutton" value="Cancel">
 
@@ -110,7 +119,8 @@
           </form> 
       </div>
     </div>
-  
+    <script src="terms.js"></script>
+
     </body>
 
 </html>
