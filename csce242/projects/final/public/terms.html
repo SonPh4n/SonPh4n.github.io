@@ -74,8 +74,42 @@
       </div>
       <div class="main">
         <h2>Cooking Recipes to Build Your Soft Skills</h2>
-        
+        <a href="#" id="add-link">+</a>
+
       </div>
+
+      <!-- The Add/Edit Term Modal -->
+    <div id="add-edit-modal" class="modal">
+      <div class="modal-content">
+          <span class="close">&times;</span>
+          <form id="add-edit-form">
+              <div class="flex-container">
+                  <div id = "column1">
+                    <img src="https://place-hold.it/200x300" id="img-prev"/> <br>
+                    <label for="image">Upload Image:</label> 
+                    <input type="file" id="image" name="image" accept="image/*"/>
+                  </div>
+
+                  <div id ="column2">
+                    <h2>Make Changes to Your Term</h2>
+                    <input type="hidden" id="_id" name="_id">
+                    <label for="termName">Term Name:</label>
+                    <input type="text" id="termName" name="name" required/><br><br>
+                    <label for="termDefinition">Defintion:</label>
+                    <textarea id="termDefinition" name="definition" required></textarea><br><br>
+                    <label for="relatedTerms">Related Terms: </label>
+                    <input type="button" id="addrelatedButton" value="Add Related Term"/><br><br>
+                    <div id="morerelated"></div>
+
+
+                    <input type="button" id="cancelbutton" value="Cancel">
+
+                    <input type="submit" value="Save Term">
+                  </div>
+              </div>
+          </form> 
+      </div>
+    </div>
   
     </body>
 
