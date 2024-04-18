@@ -2,6 +2,7 @@ const getTerms = async () => {
 
     try {
         let response = await fetch("http://localhost:3001/api/terms");
+        // let response = await fetch("https://sonph4n-github-io.onrender.com");
             return await response.json();
         } catch (error) {
             console.log("error retrieving json");
@@ -239,6 +240,7 @@ const initializeDropdowns = () => {
 
 window.onload = () => {
     showTerms();
+    document.getElementById("add-edit-form").onsubmit = addEditForm;
     initializeDropdowns();
 };
    

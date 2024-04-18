@@ -19,6 +19,7 @@ const termSchema = new mongoose.Schema({
     image: String,
     definition: String,
     relatedTerms: [String],
+    difficultyLevel: String,
 });
 
 const Term = mongoose.model("Term", termSchema);
@@ -94,7 +95,8 @@ app.post("/api/terms", upload.single("image"), (req, res) => {
     const term = new Term({
         name:req.body.name,
         definition:req.body.definition,
-        relatedTerms:req.body.relatedTerms.split(",")
+        relatedTerms:req.body.relatedTerms.split(","),
+        difficultyLevel: req.body.difficultyLevel 
     })
     
     if(req.file){
@@ -144,16 +146,19 @@ app.put("/api/terms/:id", upload.single("image"), (req, res) => {
     res.send(term);
   };
 
-const validateTerms = (terms) =>{
+  const validateTerms = (terms) => {
     const schema = Joi.object({
         _id: Joi.allow(""),
         name: Joi.string().min(3).required(),
         definition: Joi.string().min(3).required(),
-        relatedTerms: Joi.allow(),
+        relatedTerms: Joi.array().items(Joi.string()), 
+        image: Joi.string().allow(""),
+        difficultyLevel: Joi.string().valid('Beginner', 'Intermediate', 'Expert').required()
 
     });
     return schema.validate(terms);
 };
+
 
 app.listen(3001, () => {
     console.log("im listening");
