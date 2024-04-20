@@ -27,9 +27,13 @@ table {
     padding: 0px 10px;
   }
 
-  .main h2, .main h3{
+  .title{
+    margin-left: 200px; /* Same as the width of the sidenav */
+    font-size: 20px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
     text-align: center;
   }
+
 
 
 
@@ -45,14 +49,14 @@ h1{
 #add-link {
 font-size: 25px;
 text-decoration: none; 
-color: rgb(175, 0, 250); 
+color: rgb(255, 0, 0); 
 padding: 5px; 
 border-radius: 25%; 
 transition: background-color 0.3s, color 0.3s; 
 }
 
 #add-link:hover {
-background-color: rgb(175, 0, 250); 
+background-color: rgb(0, 250, 71); 
 color: white; 
 }
 

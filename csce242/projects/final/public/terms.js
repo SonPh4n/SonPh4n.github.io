@@ -1,14 +1,17 @@
 const getTerms = async () => {
-
     try {
-        let response = await fetch("http://localhost:3001/api/terms");
-        // let response = await fetch("https://sonph4n-github-io.onrender.com");
-            return await response.json();
-        } catch (error) {
-            console.log("error retrieving json");
-            return "";
-        }
-    };
+        // const response = await fetch("http://localhost:3001/api/terms");
+        const response = await fetch("https://sonph4n-github-io.onrender.com/api/terms");
+        const data = await response.json();
+        console.log("Fetched terms data:", data);  
+        return data;
+    } catch (error) {
+        console.error("error retrieving json", error);
+        return [];
+    }
+};
+
+
 
     const populateEditForm = (term) => {
         const form = document.getElementById("add-edit-form");
@@ -19,7 +22,7 @@ const getTerms = async () => {
         populateRelatedTerms(term.relatedTerms); 
     
         const imgPreview = document.getElementById("img-prev");
-        imgPreview.src = "/images/" + term.image_name;
+        imgPreview.src = "/images/" + term.image;
     };
 
     const populateRelatedTerms = (relatedTerms) => {
@@ -43,7 +46,7 @@ const getTerms = async () => {
     
         if (response.status === 200) {
             console.log("Term deleted successfully.");
-            document.getElementById("craft-list").innerHTML = ''; //change this because it should be sent to the table
+            document.getElementById("term-list").innerHTML = '';
             showTerms(); 
         } else {
             console.log("Error deleting term.");
@@ -55,34 +58,38 @@ const getTerms = async () => {
         const form = document.getElementById("add-edit-form");
         const formData = new FormData(form);
         
-        formData.append("relatedTerms", getRelatedTerms());
-        console.log(...formData);
+        const relatedTerms = getRelatedTerms();
+        relatedTerms.forEach(term => {
+            formData.append('relatedTerms', term);
+        });
     
+        console.log("FormData Contents:", ...formData.entries());
+    
+        let response;
         if(form._id.value.trim() == "") {
-            console.log("in post");
             response = await fetch("/api/terms", {
                 method: "POST",
                 body: formData,
             });
         } else {
+            console.log("Attempting to put data");
             response = await fetch(`/api/terms/${form._id.value}`, {
                 method: "PUT",
                 body: formData,
             });
         }
     
-        //error
         if(response.status != 200){
-            console.log("Error contacting server");
+            console.error("Error contacting server", await response.text());
             return;
         }
     
         await response.json();
         resetForm();
-    
         document.getElementById("add-edit-modal").style.display = "none";
         showTerms(); 
     };
+    
     
     const getRelatedTerms = () => {
         const inputs = document.querySelectorAll("#morerelated input");
@@ -112,53 +119,102 @@ const getTerms = async () => {
         }
     }
 
-    const showTerms = async () => {
-        let termsData = await getTerms(); 
-        let termsArray = termsData;  
+    const headerMap = {
+        'Name': 'name',
+        'Definition': 'definition',
+        'Image': 'image',
+        'Related Terms': 'relatedTerms',
+        'Difficulty Level': 'difficultyLevel'
+    };
     
-        let termsTable = document.createElement("table");
-        let headerRow = termsTable.insertRow();
-        let headers = ["ID", "Name", "Definition", "Image", "Related Terms", "Difficulty Level"];
+    const showTerms = async () => {
+        let termsData = await getTerms();
+    
+        let mainDiv = document.querySelector('.main');
+        mainDiv.innerHTML = '';
+    
+        let table = document.createElement("table");
+        let headerRow = table.insertRow();
+        let headers = ["Name", "Definition", "Image", "Related Terms", "Difficulty Level"];
         headers.forEach(headerText => {
             let headerCell = document.createElement("th");
             headerCell.textContent = headerText;
-            headerRow.appendChild(headerCell);
+            headerRow.append(headerCell);
         });
     
-        if (Array.isArray(termsArray)) {
-            termsArray.forEach(term => {
-                let row = termsTable.insertRow();
-                Object.values(term).forEach((value, index) => {
-                    let cell = row.insertCell();
-                    if (Array.isArray(value)) { 
-                        cell.textContent = value.join(", ");
-                    } else if (typeof value === 'string' && headers[index] === "Image") {  // Assuming 'Image' is the field to handle images
-                        let img = document.createElement("img");
-                        img.src = value;
-                        img.alt = "Cooking Term Image";
-                        cell.appendChild(img);
-                    } else { 
-                        cell.textContent = value.toString();
-                    }
-                });
+        termsData.forEach(term => {
+            let row = table.insertRow();
+            row.addEventListener('click', () => openModalWithTerm(term));  
+            headers.forEach(header => {
+                let cell = row.insertCell();
+                let key = headerMap[header];
+                let value = term[key];
+                if (key === "image" && value) {
+                    let img = document.createElement("img");
+                    img.src = "/images/" + term.image; 
+                    img.alt = "Term Image";
+                    cell.append(img);
+
+                } else if (Array.isArray(value)) {
+                    cell.textContent = value.join(", ");
+                } else {
+                    cell.textContent = value || "";
+                }
             });
-        } else {
-            console.error('Received data is not an array:', termsData);
-        }
-        
-        let mainDiv = document.querySelector('.main'); 
-        if (mainDiv) {
-            mainDiv.appendChild(termsTable); 
-        }
-    };
+        });
     
+        mainDiv.append(table);
+    };
 
 function openModalWithTerm(term) {
-
+    var modal = document.getElementById("myModal");
+    modal.style.display = "block";
 
     var modalContent = modal.querySelector(".modal-content");
     modalContent.innerHTML = '<span class="close">&times;</span>'; //simplified stack clear
 
+    var flexContainer = document.createElement("div");
+    flexContainer.className = "modal-flex-container";
+
+    var imgDiv = document.createElement("div");
+    imgDiv.className = "modal-img-container";
+    var img = document.createElement("img");
+    img.src = "/images/" + term.image;
+    img.alt = "Term Image";
+    imgDiv.append(img);
+    flexContainer.append(imgDiv);
+
+    var textContentDiv = document.createElement("div");
+    textContentDiv.className = "modal-text-container";
+
+    var name = document.createElement("h2");
+    name.textContent = term.name;
+    textContentDiv.append(name);
+
+    var definition = document.createElement("p");
+    definition.textContent = term.definition;
+    textContentDiv.append(definition);
+
+    var difficulty = document.createElement("p");
+    difficulty.textContent = "Difficulty Level: " + term.difficultyLevel;
+    textContentDiv.append(difficulty);
+
+    if (term.relatedTerms && term.relatedTerms.length) {
+        var relatedTermsHeader = document.createElement("h3");
+        relatedTermsHeader.textContent = "Related Terms";
+        textContentDiv.append(relatedTermsHeader);
+
+        var ul = document.createElement("ul");
+        term.relatedTerms.forEach(relatedTerm => {
+            var li = document.createElement("li");
+            li.textContent = relatedTerm;
+            ul.append(li);
+        });
+        textContentDiv.append(ul);
+    }
+
+    flexContainer.append(textContentDiv);
+    modalContent.append(flexContainer);
 
      var editButton = document.createElement("button");
      editButton.textContent = "Edit";
