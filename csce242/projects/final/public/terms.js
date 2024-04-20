@@ -1,7 +1,7 @@
 const getTerms = async () => {
     try {
-        // const response = await fetch("http://localhost:3001/api/terms");
-        const response = await fetch("https://sonph4n-github-io.onrender.com/api/terms");
+        const response = await fetch("http://localhost:3001/api/terms");
+        // const response = await fetch("https://sonph4n-github-io.onrender.com/api/terms");
         const data = await response.json();
         console.log("Fetched terms data:", data);  
         return data;
