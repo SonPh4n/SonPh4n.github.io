@@ -122,7 +122,7 @@ const updateTerm = async (req, res) => {
   };
 
   if (req.file) {
-      fieldsToUpdate.image = "images/" + req.file.filename;
+      fieldsToUpdate.image = req.file.filename;
   }
 
   try {
