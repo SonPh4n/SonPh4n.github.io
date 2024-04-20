@@ -17,27 +17,39 @@
             <div id="myLinks">
                 <a href="mainpage.html">Dashboard</a>
                 <a href="addRecipeContact.html">Add a recipe</a>
-
-                <a href="equipment.html">Equipment Use</a>
-                <a href="terms.html">Terms</a>
-                <a href="techniques.html">Techniques</a>
-                <a href="#">Beginner Book</a>
-                <a href="beginner.html">Recipe 1</a>
-                <a href="#">Recipe 2</a>
-                <a href="#">Recipe 3</a>
-                <a href="#">Intermediate Book</a>
-                <a href="intermediate.html">Recipe 1</a>
-                <a href="#">Recipe 2</a>
-                <a href="#">Recipe 3</a>
-                <a href="#">Expert Book</a>
-                <a href="expert.html">Recipe 1</a>
-                <a href="#">Recipe 2</a>
-                <a href="#">Recipe 3</a>
+    
+                <button class="dropdown-btn">Terms & Techniques</button>
+                <div class="dropdown-container" style="display:none;">
+                  <a href="equipment.html">Equipment Use</a>
+                  <a href="terms.html">Terms</a>
+                  <a href="techniques.html">Techniques</a>
+                </div>
+          
+                <button class="dropdown-btn">Beginner Book</button>
+                <div class="dropdown-container" style="display:none;">
+                    <a href="beginner.html">Recipe 1</a>
+                    <a href="#">Recipe 2</a>
+                    <a href="#">Recipe 3</a>
+                </div>
+          
+                <button class="dropdown-btn">Intermediate Book</button>
+                <div class="dropdown-container" style="display:none;">
+                    <a href="intermediate.html">Recipe 1</a>
+                    <a href="#">Recipe 2</a>
+                    <a href="#">Recipe 3</a>
+                </div>
+          
+                <button class="dropdown-btn">Expert Book</button>
+                <div class="dropdown-container" style="display:none;">
+                    <a href="expert.html">Recipe 1</a>
+                    <a href="#">Recipe 2</a>
+                    <a href="#">Recipe 3</a>
+                </div>
             </div>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-              <i class="fa fa-bars"></i>
+            <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+                <i class="fa fa-bars"></i>
             </a>
-        </div>
+          </div>
 
         <div class="sidenav">
             <a href="mainpage.html">Dashboard</a>
