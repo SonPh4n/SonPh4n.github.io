@@ -1,178 +1,92 @@
 <!DOCTYPE html>
-<html lang="eng">
-<!--Son Phan CSCE 242-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Son Phan | Personal Site</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Rajdhani:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <header class="site-header">
+        <nav class="nav" role="navigation" aria-label="Main navigation">
+            <a class="nav-logo" href="#">SP</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <head>
-        <link rel="stylesheet" href="styles.css" />
-        <p>Son Phan</p><br />
-    </head>
-    <body>
-        <header id="main-header">
-            <h1>CSCE 242: Client-Server Computing</h1>
-            <h2>Assignments</h2>
-        </header>
-        <main id="main-content">
-            <div class="flex-container">
-
-                <section class ="col1">
-                    <a style="text-decoration: none;" href="csce242/assignments/01/index.html"><h3>Assignment 1 - Basic HTML</h3></a>
-                    <img src="images/assignment1.png" alt="Basic Html Assignment"/>
-                    <p>This assignment showcases basic html skills such as linking to sites, adding images, tables, and bullets. </p>
-                </section>
-
-                <section class ="col2">
-                    <a style="text-decoration: none;" href="csce242/assignments/02/index.html"><h3>Assignment 2 - Basic CSS</h3></a>
-                    <img src="images/assignment2.png" alt="Basic Css Assignment"/>
-                    <p>This assignment builds upon assignment 1 which helps create a better understanding of adding details such as bigger font, colors, backgrounds, and more to enhance the look.</p>
-                </section>
-
-                <section class ="col3">
-                    <a style="text-decoration: none;" href="csce242/assignments/03/index.html"><h3>Assignment 3 - Page Layout</h3></a>
-                    <img src="images/assignment3.png" alt="Page Layout Assignment"/>
-                    <p>This assignment shows how to use flexboxes and media which flex and unflex when set at a desired pixel width.</p>
-                </section>
-
-                <section class ="col4">
-                    <a style="text-decoration: none;" href="csce242/assignments/05/index.html"><h3>Assignment 5 - Recreate CSS Page</h3></a>
-                    <img src="images/assignment5pic.png" alt="recreate css page"/>
-                    <p>This assignment demonstrates previous knowledge to recreate the usc department of engineering webpage layout.</p>
-                </section>
-                
-
+    <main>
+        <section class="hero" aria-label="Introduction">
+            <div class="hero-bg"></div>
+            <div class="hero-content">
+                <h1 class="hero-title">Son Phan</h1>
+                <p class="hero-tagline">Built for performance.</p>
+                <p class="hero-sub">Developer · Problem solver</p>
             </div>
-
-            <div class="flex-container">
-                <section class ="col5">
-                    <a style="text-decoration: none;" href="csce242/assignments/07/index.html"><h3>Assignment 7 - Introduction to JavaScript</h3></a>
-                    <img src="images/assignment7pic.png" alt="Javascript"/>
-                    <p>This assignment dives into the surface of javascript such as connecting elements to animations</p>
-                </section>
-                <section class ="col6">
-                    <a style="text-decoration: none;" href="csce242/assignments/08/index.html"><h3>Assignment 8 - Conditionals</h3></a>
-                    <img src="images/assignment8pic.png" alt="Javascript conditionals"/>
-                    <p>This assignment shows how to use javascript conditonals if then statements</p>
-                </section>
-                <section class ="col7">
-                    <a style="text-decoration: none;" href="csce242/assignments/09/index.html"><h3>Assignment 9 - Loops</h3></a>
-                    <img src="images/assignment9pic.png" alt="Javascript loops"/>
-                    <p>This assignment shows how to use javascript loops to bounce a ball and onclicks</p>
-                </section>
-                <section class ="col8">
-                    <a style="text-decoration: none;" href="csce242/assignments/10/index.html"><h3>Assignment 10 - Arrays</h3></a>
-                    <img src="images/assignment10pic.png" alt="Javascript arrays"/>
-                    <p>This assignment shows how to use javascript arrays to display pictures and slideshows</p>
-                </section>
+            <div class="hero-accent">
+                <span class="hero-line"></span>
+                <span class="hero-dot"></span>
             </div>
-            
-            <div class="flex-container">
-                <section class ="col9">
-                    <a style="text-decoration: none;" href="csce242/assignments/11/index.html"><h3>Assignment 11 - Classes</h3></a>
-                    <img src="images/assignment11pic.png" alt="Javascript classes and modals"/>
-                    <p>This assignment we needed to use an array of classes and getter methods to display an initial title and picture. When clicked a modal would pop up with additional detail.</p>
-                </section>
-                <section class ="col10">
-                    <a style="text-decoration: none;" href="csce242/assignments/12/index.html"><h3>Assignment 12 - JSON Parsing</h3></a>
-                    <img src="images/assignment12pic.png" alt="Parsing JSON"/>
-                    <p>This assignment we needed parse a given json file that includes name value pairs as well as arrays and images. It then would be displayed and styled as such.</p>
-                </section>
-                <section class ="col11">
-                    <a style="text-decoration: none;" href="https://server-helloworld.onrender.com"><h3>Assignment 13 - Server Side</h3></a>
-                    <img src="images/assignment13pic.png" alt="ServerSide"/>
-                    <p>This assignment we set up node, nodemon, and render.</p>
-                    <a href="https://server-helloworld.onrender.com"><p>Live Render</p></a>
-                    <a href="https://github.com/SonPh4n/server_helloworld/blob/main/app.js"><p>Github Code</p></a>
-                </section>
-                <section class ="col12">
-                    <a style="text-decoration: none;" href="https://reading-server-side-json-clb5.onrender.com"><h3>Assignment 14 - Reading Server Side JSON</h3></a>
-                    <img src="images/assignment14pic.png" alt="ServerSide"/>
-                    <p>This assignment we set up a new repo and created a json file from an array and had it populate from the server to the client.</p>
-                    <a href="https://reading-server-side-json-clb5.onrender.com"><p>Live Render</p></a>
-                    <a href="https://github.com/SonPh4n/reading-server-side-json"><p>Github Code</p></a>
-                </section>
+        </section>
+
+        <section id="about" class="section section-about">
+            <div class="container">
+                <h2 class="section-title">About</h2>
+                <p class="section-text">
+                    Placeholder: 
+                </p>
             </div>
-            <div class="flex-container">
-                <section class ="col13">
-                    <a style="text-decoration: none;" href="https://server-get-post-5mjx.onrender.com/"><h3>Assignment 15 - Server Get and Post</h3></a>
-                    <img src="images/assignment15pic.png" alt="ServerGetnPost"/>
-                    <p>This assignment was a continuation of assignment 14 except this time we added form modal that parses input data and stores it into the database then can be viewed.</p>
-                    <a href="https://server-get-post-5mjx.onrender.com/"><p>Live Render</p></a>
-                    <a href="https://github.com/SonPh4n/Server_Get_Post"><p>Github Code</p></a>
-                </section>
-                <section class ="col14">
-                    <a style="text-decoration: none;" href="https://server-edit-delete-g3jv.onrender.com/"><h3>Assignment 17 - Server Edit and Delete</h3></a>
-                    <img src="images/assignment15pic.png" alt="ServerEditnDelete"/>
-                    <p>This is a continuation of assignment 15 and this time we added the ability to edit existing data when clicking on any image and also to delete them.</p>
-                    <a href="https://server-edit-delete-g3jv.onrender.com/"><p>Live Render</p></a>
-                    <a href="https://github.com/SonPh4n/server_edit_delete/tree/main/public"><p>Github Code</p></a>
-                </section>
-                <section class ="col15">
-                    <a style="text-decoration: none;" href="https://mongodb-crud-eift.onrender.com/"><h3>Assignment 18 - Server CRUD with MongoDB</h3></a>
-                    <img src="images/assignment15pic.png" alt="ServerCRUD"/>
-                    <p>This is a continuation of assignment 17 however this time we made all the data persistent using mongoDB</p>
-                    <a href="https://mongodb-crud-eift.onrender.com/"><p>Live Render</p></a>
-                    <a href="https://github.com/SonPh4n/MongoDB_CRUD"><p>Github Code</p></a>
-                </section>
+        </section>
+
+        <section id="skills" class="section section-skills">
+            <div class="container">
+                <h2 class="section-title">Skills</h2>
+                <ul class="skills-list" role="list">
+                    <li>HTML / CSS / JavaScript</li>
+                    <li>React / Next.js</li>
+                    <li>Node.js</li>
+                    <li>More to come…</li>
+                </ul>
             </div>
+        </section>
 
-            <h2>Projects</h2>
-            <div class="flex-container">
-                <section class ="row2col1">
-                    <a style="text-decoration: none;" href="csce242/projects/part1/242 Project Topic Selection.pdf"><h3>Part 1 Topic PDF</h3></a>
-                    <img src="images/pdf.png" alt=""/>
-                    <p>The pdf document for the creation of my web page from start to finish. Includes Name, Data, Pages, etc.</p>
-                </section>
-
-                <section class ="row2col2">
-                    <a style="text-decoration: none;" href="csce242/projects/part2/index.html"><h3>Part 2 Wireframe</h3></a>
-                    <img src="images/wireframe.png" alt=""/>
-                    <p>Wireframe creation of my web page to showcase what the finished product would look like. However this may change due to being a prototype.</p>
-                </section>
-
-                <section class ="row2col3">
-                    <a style="text-decoration: none;" href="csce242/projects/part3/mainpage.html"><h3>Part 3 HTMl and CSS</h3></a>
-                    <img src="images/projectpart3.png" alt="project part 3 html and css setup"/>
-                    <p>In this project assignment, I set up the basis of my website with multiple pages and javascript.</p>
-                </section>
-                
+        <section id="projects" class="section section-projects">
+            <div class="container">
+                <h2 class="section-title">Projects</h2>
+                <p class="section-text">projects here </p>
             </div>
-            <div class="flex-container">
-                <section class ="row2col4">
-                    <a style="text-decoration: none;" href="csce242/projects/part4/mainpage.html"><h3>Part 4 Colors-Pictures-and Text</h3></a>
-                    <img src="images/part4pic.png" alt="project part 4"/>
-                    <p>In this project assignment, I filled in the blanks and designed colors</p>
-                </section>
+        </section>
 
-                <section class ="row2col5">
-                    <a style="text-decoration: none;" href="csce242/projects/part4.5/mainpage.html"><h3>Part 4.5 Added Detailing</h3></a>
-                    <img src="images/part4pic.png" alt="project part 4.5"/>
-                    <p>In this project assignment, I readjusted my website to have more detail</p>
-                </section>
-
-                <section class ="row2col6">
-                    <a style="text-decoration: none;" href="csce242/projects/part5/mainpage.html"><h3>Part 5 Parsing JSON File</h3></a>
-                    <img src="images/part5pic.png" alt="project part 5"/>
-                    <p>In this project assignment, I changed up the terms page to have the table displayed by parsing a json file</p>
-                </section>
+        <section id="contact" class="section section-contact">
+            <div class="container">
+                <h2 class="section-title">Contact</h2>
+                <p class="section-text">Email, GitHub, LinkedIn etc</p>
             </div>
+        </section>
+    </main>
 
-            <div class="flex-container">
-                <section class ="row2col7">
-                    <a style="text-decoration: none;" href="csce242/projects/part6/mainpage.html"><h3>Part 6 Client Side Form Validation</h3></a>
-                    <img src="images/part6pic.png" alt="project part 6"/>
-                    <p>In this project assignment, I created two different forms. A contact me and add recipe form. The contact form uses server api to forward forms to emails and the recipe form lists it as an html</p>
-                </section>
-
-                <section class ="row2col8">
-                    <a style="text-decoration: none;" href="https://sonph4n-github-io.onrender.com"><h3>Final</h3></a>
-                    <img src="images/part7pic.png" alt="project final"/>
-                    <p>Added get/post/put/delete functionality to modify the terms page. Data is also persistent using mongoDB.</p>
-                    <a href="https://sonph4n-github-io.onrender.com"><p>Live Render</p></a>
-                    <a href="https://github.com/SonPh4n/SonPh4n.github.io/tree/main/csce242/projects/final"><p>Github Code</p></a>
-                </section>
-
-                
+    <footer class="racetrack-wrap" aria-hidden="true">
+        <div class="racetrack">
+            <div class="racetrack-lane"></div>
+            <div class="racetrack-line"></div>
+            <div class="car-container" role="img" aria-label="BMW driving on racetrack">
+                <svg class="car-bmw" viewBox="0 0 120 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M12 28 L20 28 L24 24 L44 24 L48 28 L72 28 L76 32 L92 32 L96 28 L108 28 L108 36 L96 36 L92 40 L28 40 L24 36 L12 36 Z" fill="#1c69d4" stroke="#fff" stroke-width="1.5" />
+                    <path d="M28 24 L36 20 L52 20 L60 24" fill="#0d0d0d" stroke="#fff" stroke-width="1" />
+                    <circle cx="28" cy="40" r="4" fill="#1a1a1a" stroke="#fff" stroke-width="1" />
+                    <circle cx="84" cy="40" r="4" fill="#1a1a1a" stroke="#fff" stroke-width="1" />
+                    <path d="M48 26 L56 26 L58 28 L58 32 L56 34 L48 34 L46 32 L46 28 Z" fill="#0d0d0d" stroke="#fff" stroke-width="0.8" />
+                </svg>
             </div>
-        </main>
-    </body>
+        </div>
+    </footer>
 
+</body>
 </html>
