@@ -1,15 +1,17 @@
-/* --- Variables: car / BMW inspired --- */
+/* --- Variables: cinematic car photography --- */
 :root {
-  --bg-dark: #0a0a0b;
-  --bg-card: #121214;
-  --bmw-blue: #1c69d4;
-  --bmw-blue-dim: rgba(28, 105, 212, 0.25);
-  --accent: #4a9eff;
-  --text: #e8e8ea;
-  --text-muted: #888;
-  --track: #1a1a1c;
-  --track-line: #2a2a2e;
-  --white: #fff;
+  --bg-dark: #08080a;
+  --bg-card: #0f0f11;
+  --bg-elevated: #161618;
+  --accent: #c9a227;
+  --accent-dim: rgba(201, 162, 39, 0.15);
+  --accent-glow: rgba(201, 162, 39, 0.25);
+  --text: #e6e4e0;
+  --text-muted: #7a7672;
+  --border: #1e1d1b;
+  --track: #141414;
+  --track-line: #252422;
+  --white: #faf9f6;
   --font-display: "Orbitron", sans-serif;
   --font-body: "Rajdhani", sans-serif;
 }
@@ -33,6 +35,7 @@ body {
   line-height: 1.6;
   min-height: 100vh;
   overflow-x: hidden;
+  padding-bottom: 120px;
 }
 
 /* --- Header --- */
@@ -43,9 +46,9 @@ body {
   right: 0;
   z-index: 100;
   padding: 1rem 1.5rem;
-  background: rgba(10, 10, 11, 0.85);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--track-line);
+  background: rgba(8, 8, 10, 0.9);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
 }
 
 .nav {
@@ -66,7 +69,7 @@ body {
 }
 
 .nav-logo:hover {
-  color: var(--bmw-blue);
+  color: var(--accent);
 }
 
 .nav-links {
@@ -87,6 +90,11 @@ body {
   color: var(--accent);
 }
 
+.nav-links a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
 /* --- Hero --- */
 .hero {
   position: relative;
@@ -102,7 +110,8 @@ body {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 80% 50% at 50% 20%, var(--bmw-blue-dim) 0%, transparent 50%),
+    radial-gradient(ellipse 90% 60% at 50% 30%, var(--accent-dim) 0%, transparent 55%),
+    radial-gradient(ellipse 60% 40% at 80% 70%, rgba(30, 29, 27, 0.6) 0%, transparent 50%),
     linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-card) 100%);
   pointer-events: none;
 }
@@ -125,10 +134,11 @@ body {
 .hero-tagline {
   font-family: var(--font-display);
   font-size: clamp(0.9rem, 2.5vw, 1.1rem);
-  color: var(--bmw-blue);
+  color: var(--accent);
   letter-spacing: 0.35em;
   text-transform: uppercase;
   margin-bottom: 0.5rem;
+  text-shadow: 0 0 30px var(--accent-glow);
 }
 
 .hero-sub {
@@ -149,14 +159,15 @@ body {
 .hero-line {
   width: 40px;
   height: 2px;
-  background: var(--track-line);
+  background: var(--border);
 }
 
 .hero-dot {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: var(--bmw-blue);
+  background: var(--accent);
+  box-shadow: 0 0 12px var(--accent-glow);
 }
 
 /* --- Sections --- */
@@ -174,13 +185,47 @@ body {
   color: var(--white);
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid var(--bmw-blue);
+  border-bottom: 2px solid var(--accent);
   display: inline-block;
 }
 
 .section-text {
   color: var(--text-muted);
   max-width: 60ch;
+}
+
+.section-text-wide {
+  max-width: none;
+}
+
+.section-lead {
+  color: var(--text);
+  font-size: 1.1rem;
+  max-width: 55ch;
+  margin-bottom: 1rem;
+}
+
+.about-list {
+  list-style: none;
+  color: var(--text-muted);
+  max-width: 55ch;
+}
+
+.about-list li {
+  position: relative;
+  padding-left: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.about-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 4px;
+  height: 4px;
+  background: var(--accent);
+  border-radius: 50%;
 }
 
 .section-about,
@@ -190,8 +235,28 @@ body {
   padding-bottom: 5rem;
 }
 
+.section-about .section-lead {
+  max-width: none;
+}
+
 .section-skills {
   background: var(--bg-card);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+.skills-group-title {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
 }
 
 .skills-list {
@@ -203,89 +268,350 @@ body {
 
 .skills-list li {
   padding: 0.5rem 1rem;
-  background: var(--track);
-  border: 1px solid var(--track-line);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
   border-radius: 4px;
   color: var(--text);
   font-weight: 500;
 }
 
 .skills-list li:hover {
-  border-color: var(--bmw-blue);
+  border-color: var(--accent);
   color: var(--accent);
+  box-shadow: 0 0 20px var(--accent-dim);
 }
 
 .container {
   width: 100%;
 }
 
-/* --- Racetrack footer --- */
-.racetrack-wrap {
-  margin-top: auto;
+/* --- Project cards --- */
+.project-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.project-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 24px var(--accent-dim);
+}
+
+.project-card-placeholder {
+  opacity: 0.85;
+}
+
+.project-card-title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--white);
+  margin: 0;
+}
+
+.project-card-role {
+  font-size: 0.85rem;
+  color: var(--accent);
+  margin: 0.25rem 0 0.5rem 0;
+}
+
+.project-card-desc {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+  flex: 1;
+}
+
+.project-card-desc-hidden {
+  display: none;
+}
+
+.project-card-cta {
+  font-weight: 600;
+  color: var(--accent);
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+}
+
+button.project-card {
+  width: 100%;
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  border-radius: 6px;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.project-card-tech {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0;
+}
+
+.project-card-tech li {
+  padding: 0.25rem 0.6rem;
+  background: var(--track);
+  border-radius: 4px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.project-card-link {
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+  transition: color 0.2s ease;
+}
+
+.project-card-link:hover {
+  color: var(--white);
+}
+
+.project-card-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.project-card-link-muted {
+  color: var(--text-muted);
+  cursor: default;
+}
+
+.project-card-link-muted:hover {
+  color: var(--text-muted);
+}
+
+/* --- Project modal --- */
+.project-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.project-modal.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.project-modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+}
+
+.project-modal-box {
+  position: relative;
+  width: 100%;
+  max-width: 560px;
+  max-height: 85vh;
+  overflow: auto;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.5rem 2rem 2rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.project-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 2rem;
+  height: 2rem;
   padding: 0;
+  border: none;
+  background: var(--bg-elevated);
+  color: var(--text);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.project-modal-close:hover {
+  background: var(--border);
+  color: var(--accent);
+}
+
+.project-modal-title {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--white);
+  margin: 0 2.5rem 0.25rem 0;
+  padding-right: 2rem;
+}
+
+.project-modal-role {
+  font-size: 0.9rem;
+  color: var(--accent);
+  margin: 0 0 1rem 0;
+}
+
+.project-modal-desc {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0 0 1rem 0;
+}
+
+.project-modal-tech {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.project-modal-tech li {
+  padding: 0.25rem 0.6rem;
+  background: var(--track);
+  border-radius: 4px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* --- Contact --- */
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.contact-link {
+  display: inline-block;
+  padding: 0.6rem 1.25rem;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  transition: border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-link:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  box-shadow: 0 0 20px var(--accent-dim);
+}
+
+.contact-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* --- Cars at bottom of browser (no track) --- */
+.racetrack-wrap {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  margin: 0;
+  padding: 0;
+  height: 112px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+}
+
+.racetrack-wrap.at-bottom {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .racetrack {
   position: relative;
-  height: 80px;
-  background: var(--track);
-  border-top: 4px solid var(--track-line);
+  width: 100%;
+  height: 100%;
   overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
 
-.racetrack-lane {
+.racetrack-bg {
   position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  height: 24px;
-  transform: translateY(-50%);
-  background: repeating-linear-gradient(
-    90deg,
-    var(--track-line) 0,
-    var(--track-line) 20px,
-    var(--track) 20px,
-    var(--track) 40px
-  );
-  opacity: 0.6;
+  top: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-position: center bottom;
 }
 
-.racetrack-line {
-  position: absolute;
-  top: 50%;
+.racetrack-bg-left {
   left: 0;
-  right: 0;
-  height: 0;
-  transform: translateY(-50%);
-  border-top: 2px dashed var(--text-muted);
-  opacity: 0.4;
+  width: 50%;
+  background-image: url("images/racetrack2.png");
+  background-size: 100% 100%;
 }
 
-/* --- BMW car animation --- */
+.racetrack-bg-right {
+  left: 50%;
+  width: 50%;
+  background-image: url("images/racetrack.png");
+  background-size: 100% 100%;
+}
+
+/* --- Racing cars (position set by JS, right-to-left) --- */
 .car-container {
   position: absolute;
-  top: 50%;
+  bottom: 0;
   left: 0;
-  transform: translateY(-50%);
-  width: 80px;
-  height: 32px;
-  animation: drive 12s linear infinite;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+  width: 320px;
+  height: 128px;
+  z-index: 1;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.5));
+  transition: z-index 0s;
 }
 
-.car-bmw {
+.car-container.car-bmw {
+  bottom: -10px;
+}
+
+.car-img {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: contain;
-}
-
-@keyframes drive {
-  0% {
-    left: -100px;
-  }
-  100% {
-    left: 100%;
-  }
+  object-position: center center;
 }
 
 /* --- Responsive --- */
@@ -303,8 +629,15 @@ body {
   }
 
   .car-container {
-    width: 60px;
-    height: 24px;
-    animation-duration: 10s;
+    width: 200px;
+    height: 80px;
   }
+
+.car-container.car-bmw {
+  bottom: -20px;
+  z-index: 2;
+  transform: scale(1.08);
+  transform-origin: bottom left;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.6));
+}
 }

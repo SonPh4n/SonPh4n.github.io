@@ -12,7 +12,7 @@
 <body>
     <header class="site-header">
         <nav class="nav" role="navigation" aria-label="Main navigation">
-            <a class="nav-logo" href="#">SP</a>
+            <a class="nav-logo" href="#">TP</a>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
@@ -26,9 +26,9 @@
         <section class="hero" aria-label="Introduction">
             <div class="hero-bg"></div>
             <div class="hero-content">
-                <h1 class="hero-title">Son Phan</h1>
+                <h1 class="hero-title">Thienson Phan</h1>
                 <p class="hero-tagline">Built for performance.</p>
-                <p class="hero-sub">Developer · Problem solver</p>
+                <p class="hero-sub">August 2022 - May 2026</p>
             </div>
             <div class="hero-accent">
                 <span class="hero-line"></span>
@@ -39,54 +39,132 @@
         <section id="about" class="section section-about">
             <div class="container">
                 <h2 class="section-title">About</h2>
-                <p class="section-text">
-                    Placeholder: 
-                </p>
+                <p class="section-lead">I’m a Computer Information Systems student at the University of South Carolina with a strong interest in full-stack software engineering and secure application development. I’m particularly focused on building scalable systems, writing clean and maintainable code, and understanding how frontend and backend components work together in real-world applications.
+
+                    My technical background includes modern web development frameworks, TypeScript and Java-based development, RESTful architectures, and structured database design. I also have a solid foundation in data structures, algorithms, client-server systems, and UNIX/Linux environments.
+                    
+                    I’m currently seeking software engineering internship or entry-level opportunities where I can contribute to a collaborative team, continue developing my technical depth, and build reliable, production-quality software.</p>
+                
             </div>
         </section>
 
         <section id="skills" class="section section-skills">
             <div class="container">
                 <h2 class="section-title">Skills</h2>
-                <ul class="skills-list" role="list">
-                    <li>HTML / CSS / JavaScript</li>
-                    <li>React / Next.js</li>
-                    <li>Node.js</li>
-                    <li>More to come…</li>
-                </ul>
+                <div class="skills-grid">
+                    <div class="skills-group">
+                        <h3 class="skills-group-title">Languages</h3>
+                        <ul class="skills-list" role="list">
+                            <li>JavaScript</li>
+                            <li>CSS</li>
+                            <li>HTML</li>
+                            <li>JSON</li>
+                            <li>Next.js</li>
+                        </ul>
+                    </div>
+                    <div class="skills-group">
+                        <h3 class="skills-group-title">Frameworks & Tools</h3>
+                        <ul class="skills-list" role="list">
+                            <li>Node.js</li>
+                            <li>Git</li>
+                            <li>React</li>
+                            <li>MongoDB</li>
+                        </ul>
+                    </div>
+                    <div class="skills-group">
+                        <h3 class="skills-group-title">Concepts & Systems</h3>
+                        <ul class="skills-list" role="list">
+                            <li>Full Stack Development</li>
+                            <li>CRUD</li>
+                            <li>Client-Server Architecture</li>
+                            <li>Agile/Scrum</li>
+                            <li>UNIX/Linux</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section id="projects" class="section section-projects">
             <div class="container">
                 <h2 class="section-title">Projects</h2>
-                <p class="section-text">projects here </p>
+                <p class="section-text section-text-wide">Things I've built or contributed to.</p>
+                <div class="project-cards">
+                    <button type="button" class="project-card" data-project="diabetes" aria-label="Open Diabetes Health Tracking Application details">
+                        <h3 class="project-card-title">Diabetes Health Tracking Application</h3>
+                        <p class="project-card-role">Full-Stack Developer · Team of 5 developers</p>
+                        <p class="project-card-desc project-card-desc-hidden">Collaborated with a team of 5 developers to build a full-stack health tracking web application for individuals with diabetes. Implemented secure user authentication using hashing and access control best practices. Developed frontend components using React and Next.js with TypeScript and Tailwind CSS. Built backend REST APIs using Node.js and Express. Applied secure software development practices, including encryption, input validation, and mitigation of common web vulnerabilities. Used Git and GitHub for version control, code reviews, and coordinated feature development.</p>
+                        <ul class="project-card-tech" role="list">
+                            <li>React</li>
+                            <li>Next.js</li>
+                            <li>Express</li>
+                            <li>Tailwind CSS</li>
+                            <li>TypeScript</li>
+                        </ul>
+                        <span class="project-card-cta">View details</span>
+                    </button>
+                    <button type="button" class="project-card" data-project="cookbook" aria-label="Open Cookbook Application details">
+                        <h3 class="project-card-title">Cookbook Application</h3>
+                        <p class="project-card-role">Full-Stack Developer</p>
+                        <p class="project-card-desc project-card-desc-hidden">Created a full-stack web application allowing users to input, organize, and manage personalized recipe books. Built a multi-level recipe book system with categories based on cooking skill levels, featuring recipe instructions, images, and ingredient lists. Utilized HTML, CSS, and JavaScript for front-end development, ensuring a responsive and dynamic user experience. Implemented back-end functionalities using server-side JSON, GET and POST requests, and MongoDB for data storage and CRUD operations. Incorporated client-side form validation for seamless user interaction and data persistence across sessions.</p>
+                        <ul class="project-card-tech" role="list">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>MongoDB</li>
+                        </ul>
+                        <span class="project-card-cta">View details</span>
+                    </button>
+                    <button type="button" class="project-card" data-project="scrum" aria-label="Open Scrum Framework Recreation details">
+                        <h3 class="project-card-title">Scrum Framework Recreation</h3>
+                        <p class="project-card-role">Software Engineering Team Project · Team of 4 Developers</p>
+                        <p class="project-card-desc project-card-desc-hidden">Developed a Scrum framework using data loaders, facades, and JSON file integration to streamline project management and task automation. Applied methodologies including sprint planning, backlog management, and task prioritization to ensure efficient workflow. Implemented a task tracking system to enhance team collaboration and productivity.</p>
+                        <ul class="project-card-tech" role="list">
+                            <li>JSON</li>
+                        </ul>
+                        <span class="project-card-cta">View details</span>
+                    </button>
+                </div>
             </div>
         </section>
+
+        <div id="project-modal" class="project-modal" aria-hidden="true" aria-modal="true" role="dialog" aria-labelledby="project-modal-title">
+            <div class="project-modal-overlay"></div>
+            <div class="project-modal-box">
+                <button type="button" class="project-modal-close" aria-label="Close modal">&times;</button>
+                <h2 id="project-modal-title" class="project-modal-title"></h2>
+                <p class="project-modal-role"></p>
+                <p class="project-modal-desc"></p>
+                <ul class="project-modal-tech" role="list"></ul>
+            </div>
+        </div>
 
         <section id="contact" class="section section-contact">
             <div class="container">
                 <h2 class="section-title">Contact</h2>
-                <p class="section-text">Email, GitHub, LinkedIn etc</p>
+                <p class="section-text">Reach out — I'm happy to connect.</p>
+                <div class="contact-links">
+                    <a class="contact-link" href="https://github.com/SonPh4n" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a>
+                    <a class="contact-link" href="https://www.linkedin.com/in/thiensonphan" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
+                    <a class="contact-link" href="mailto:sthienphan@gmail.com" aria-label="Email">Email</a>
+                </div>
             </div>
         </section>
     </main>
 
     <footer class="racetrack-wrap" aria-hidden="true">
-        <div class="racetrack">
-            <div class="racetrack-lane"></div>
-            <div class="racetrack-line"></div>
-            <div class="car-container" role="img" aria-label="BMW driving on racetrack">
-                <svg class="car-bmw" viewBox="0 0 120 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <path d="M12 28 L20 28 L24 24 L44 24 L48 28 L72 28 L76 32 L92 32 L96 28 L108 28 L108 36 L96 36 L92 40 L28 40 L24 36 L12 36 Z" fill="#1c69d4" stroke="#fff" stroke-width="1.5" />
-                    <path d="M28 24 L36 20 L52 20 L60 24" fill="#0d0d0d" stroke="#fff" stroke-width="1" />
-                    <circle cx="28" cy="40" r="4" fill="#1a1a1a" stroke="#fff" stroke-width="1" />
-                    <circle cx="84" cy="40" r="4" fill="#1a1a1a" stroke="#fff" stroke-width="1" />
-                    <path d="M48 26 L56 26 L58 28 L58 32 L56 34 L48 34 L46 32 L46 28 Z" fill="#0d0d0d" stroke="#fff" stroke-width="0.8" />
-                </svg>
+        <div class="racetrack" id="racetrack">
+            <div class="racetrack-bg racetrack-bg-left" aria-hidden="true"></div>
+            <div class="racetrack-bg racetrack-bg-right" aria-hidden="true"></div>
+            <div class="car-container car-mclaren" id="car-mclaren" data-car="mclaren" role="img" aria-label="McLaren racing">
+                <img class="car-img" src="images/mclaren765lt.png" alt="" />
+            </div>
+            <div class="car-container car-bmw" id="car-bmw" data-car="bmw" role="img" aria-label="BMW racing">
+                <img class="car-img" src="images/bmwf80.png" alt="" />
             </div>
         </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
